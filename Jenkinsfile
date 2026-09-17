@@ -21,7 +21,7 @@ pipeline {
         stage('Test Application') {
             steps {
                 echo 'Running basic application check...'
-                bat 'docker --context desktop-linux images devops-support-assistant:latest'
+                bat 'docker build -t devops-support-assistant:latest .'
             }
         }
 
